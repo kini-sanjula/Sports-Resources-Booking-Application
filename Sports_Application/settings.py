@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sports',
+    'accounts',
     'crispy_forms'
 ]
 
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'Sports_Application.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
