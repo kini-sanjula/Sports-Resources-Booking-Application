@@ -25,9 +25,9 @@ class UserLoginForm(forms.Form):
         return super(UserLoginForm, self).clean(*args, **kwargs)
 
 class UserRegisterForm(forms.ModelForm):
-    email1 = forms.Emailfield(label='Email Address')
-    email2 = forms.Emailfield(label='Confirm email')
-    password = forms.Charfields(widget=forms.PasswordInput)
+    email1 = forms.EmailField(label='Email Address')
+    email2 = forms.EmailField(label='Confirm email')
+    password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
         model = User

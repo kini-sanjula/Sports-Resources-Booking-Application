@@ -28,8 +28,8 @@ from .forms import UserLoginForm, UserRegisterForm
 #     }
 #     return render(request, 'login.html', context)
 
-# def login(request):
-#     return render(request, 'sports/login.html')
+def login(request):
+    return render(request, 'sports/login.html')
 
-# def register(request):
-#     return render(request, 'sports/register.html')
+def register(request):
+    return render(request, 'sports/register.html')
