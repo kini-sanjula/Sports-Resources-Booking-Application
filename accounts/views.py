@@ -16,14 +16,16 @@ from .forms import UserLoginForm, UserRegisterForm
 
 # Create your views here.
 def user_login(request):
-    form = UserLoginForm(request.POST or None)
-    if form.is_valid():
-        username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password')
-        user = authenticate(username=username, password=password)
-        if user:
-            login(request, user)
-            return redirect('/')
+    form = UserLoginForm()
+    if request.method == "POST":
+        form = UserLoginForm(request.POST or None)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user:
+                login(request, user)
+                return redirect('/')
     context = {
         'form': form, 
     }
