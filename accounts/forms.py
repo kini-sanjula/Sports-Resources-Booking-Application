@@ -1,10 +1,8 @@
 from django import forms
 
 from django.contrib.auth import authenticate, get_user_model, login, logout
-
-from django.contrib.auth.models import User
-
-User = get_user_model()
+from django.forms import ValidationError
+from accounts.models import User
 
 class UserLoginForm(forms.Form):
     username = forms.CharField()
@@ -17,11 +15,10 @@ class UserLoginForm(forms.Form):
         if username and password:
             user = authenticate(username=username, password=password)
             if not user:
-                raise forms.ValidateError('This user does not exists')
-            if not user.check_password(password):
-                raise forms.ValidateError('Incorrect password')
+                raise forms.ValidationError('This user does not exists')
             if not user.is_active:
                 raise forms.ValidationError('This user is not active')
+            return user
         return super(UserLoginForm, self).clean(*args, **kwargs)
 
 class UserRegisterForm(forms.ModelForm):

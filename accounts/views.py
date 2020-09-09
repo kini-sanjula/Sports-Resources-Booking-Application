@@ -20,12 +20,9 @@ def user_login(request):
     if request.method == "POST":
         form = UserLoginForm(request.POST or None)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user:
-                login(request, user)
-                return redirect('/')
+            user = form.cleaned_data
+            login(request, user)
+            return redirect('/')
     context = {
         'form': form, 
     }
