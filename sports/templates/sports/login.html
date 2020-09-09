@@ -46,7 +46,7 @@ button {
 </head>    
 <body>    
     <center> <h1>Login Form </h1> </center>   
-    <form>  
+    <!-- <form>  
         <div class="container">   
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
@@ -57,6 +57,11 @@ button {
             <button type="button" class="cancelbtn"> Cancel</button>   
             Forgot <a href="#"> password? </a>   
         </div>   
-    </form>     
+    </form>      -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
 </body>     
 </html>  
