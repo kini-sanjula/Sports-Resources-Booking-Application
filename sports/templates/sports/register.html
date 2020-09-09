@@ -1,1 +1,54 @@
 
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="s.css">
+            <title>Login Page</title>
+    </head>
+	
+    <body>
+	 <div id="container">
+		 <h1> Student Registration Form </h1>
+         <form>
+		
+			<fieldset>
+             <legend style="border-style:inherit"> Enter Your Details: </legend>
+           
+                    <br><br><b>First Name:</b> <input type = "text" placeholder="Fname" name = "Fname" required />
+                  &nbsp &nbsp   <b>Middel Name:</b> <input type = "text" placeholder="Mname" name = "Mname" required />
+                  &nbsp &nbsp   <b>Last Name:</b> <input type = "text" placeholder="Lname" name = "Lname" required /> <br><br>
+                    <img alt="Photo" src="images.png" align="right" >
+                    <b>Gender: &nbsp &nbsp </b> Male <input type = "radio" name = "gender" value = "Male"/>
+                                        &nbsp &nbsp &nbsp &nbspFemale <input type = "radio" name = "gender" value = "Female"/> 
+                                       &nbsp &nbsp &nbsp &nbsp Other <input type = "radio" name = "gender" value = "other"/> <br><br>
+                    <b> Present Address&nbsp &nbsp &nbsp &nbsp  : </b> 
+					<textarea rows = "5" cols = "50" name = "address"> </textarea> <br><br>
+                     </select><br>
+                    <b>New Password &nbsp &nbsp &nbsp &nbsp &nbsp :</b>    <input type = "password" name = "password" /> <br><br>
+                    <b>Confirm Password &nbsp : </b>    <input type = "password" name = "password" /> <br>
+						<br>
+                    <b> Date of Birth&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp : </b> <input type = "date"/> <br><br>
+                    <b> Student Email ID &nbsp &nbsp   : </b> <input type = "email"/> <br><br>
+                    <b> Mobile Number &nbsp &nbsp &nbsp &nbsp  : </b> <input type = "Mobile number" maxlenght="10"/> <br><br>
+
+                    <b>Select Stream &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp : </b> <select Name="Stream" ><br><br>
+                             <option name = "DIPLOMA">DIPLOMA</option>
+                             <option name = "B-TECH">B-TECH</option>
+                             <option name = "MASTER">MASTER</option> 
+                             <option name = "B-SC.">B-SC.</option>
+                             <option name = "M-SC.">M-SC.</option>
+                             </select><br><br>
+                <!-- <b>Upload marksheet &nbsp : </b><input type="file" name=""><br> -->
+                   <br>
+                   	<input type="checkbox" class="checkbox" required="">I Agree To The Terms & Conditions<br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+				<input class="btn" type="submit" value="Login"> 
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+				<input class="btn" type="reset" value="Reset">					
+					<br>
+            </fieldset>
+        </form>		  
+		</div>
+
+    </body>
+</html>

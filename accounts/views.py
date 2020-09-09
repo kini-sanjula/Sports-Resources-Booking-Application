@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
-from users import views as user_views
+
 from django.contrib import admin
-from django.contrib.auth import views as auth_views
+
 from django.contrib.auth import ( 
     authenticate,
     get_user_model,
@@ -11,22 +11,22 @@ from django.contrib.auth import (
 from .forms import UserLoginForm, UserRegisterForm
 # Create your views here.
 
-def login_view(request):
-    next = request.GET.get('next')
-    form = UserLoginForm(request.POST or None)
-    if form.is_valid():
-        username = form.cleaned_data.get('usernam')
-        password = form.cleaned_data.get('password')
-        user = authenticate(username=username, password=password)
-        login(request, user)
-        if next: 
-            return redirect(next)
-        return redirects('/')
+# def login_view(request):
+#     next = request.GET.get('next')
+#     form = UserLoginForm(request.POST or None)
+#     if form.is_valid():
+#         username = form.cleaned_data.get('usernam')
+#         password = form.cleaned_data.get('password')
+#         user = authenticate(username=username, password=password)
+#         login(request, user)
+#         if next: 
+#             return redirect(next)
+#         return redirects('/')
 
-    context = {
-        'form': form, 
-    }
-    return render(request, 'login.html', context)
+#     context = {
+#         'form': form, 
+#     }
+#     return render(request, 'login.html', context)
 
 # def login(request):
 #     return render(request, 'sports/login.html')
