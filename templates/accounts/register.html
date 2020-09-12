@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <title>Register here!</title>
+    </head>
+	
+    <body>
+	 <div id="container">
+		 <h1> Student Registration Form </h1>
+         <form>
+		
+			<fieldset>
+             <legend style="border-style:inherit"> Enter Your Details: </legend>
+                 <form action="registeration" method="post">
+                     {% csrf_token %}
+                     <label for="fname">Enter your first name :</label><br>
+                     <input type="text" name="fname" /><br />
+             
+                     <label for="lname">Enter your last name : </label><br>
+                     <input type="text" name="lname" /><br />
+            
+             
+                     <label for="email">Enter your email : </label><br>
+                     <input type="email" name="email" /><br />
+             
+                     <label for="pass">Enter your password : </label><br>
+                     <input type="password" name="pass" /><br />
+             
+                     <label for="pass1">Re-enter your password :</label><br>
+                     <input type="password" name="pass1" /><br />
+             
+                     <input type="submit" />
+                 </form>
+                 <div>
+                     <!-- {% for message in messages %}
+                     {{message}}
+                     {% endfor %} -->
+                 </div>
+                 <a href="login1">Already registered?</a>
+             </body>
+             </html>
+            </fieldset>
+        </form>		  
+		</div>
+
+    </body>
+</html>
